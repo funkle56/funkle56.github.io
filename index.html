@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孟若羽作品在线观看 - 官方影像门户_原创精品与创作者社区</title>
+<meta name="description" content="孟若羽作品在线观看官方网站，汇集孟若羽原创影像精品、创作幕后与人物访谈，打造值得信赖的创作者内容生态与品牌社区。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d2436'/%3E%3Cpath d='M24 18 L48 32 L24 46 Z' fill='%23ff7a45'/%3E%3C/svg%3E">
+<style>
+:root{
+  --my-ink:#1d2436;
+  --my-ink-soft:#3c4560;
+  --my-paper:#f5f6fa;
+  --my-card:#ffffff;
+  --my-accent:#ff7a45;
+  --my-accent-deep:#e05a25;
+  --my-cyan:#3fb6c8;
+  --my-line:#e3e6ef;
+  --my-muted:#7a8299;
+  --my-radius:16px;
+  --my-shadow:0 10px 30px rgba(29,36,54,.08);
+  --my-header-h:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--my-header-h)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--my-paper);
+  color:var(--my-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+
+/* ============ 吸顶：公告条 + 页头 ============ */
+.my-sticky-shell{
+  position:sticky;top:0;z-index:90;
+}
+.my-notice-bar{
+  background:linear-gradient(90deg,#1d2436,#2c3752 55%,#1d2436);
+  color:#eef1f8;
+  font-size:13.5px;
+  padding:9px 18px;
+  display:flex;align-items:center;gap:12px;
+  overflow:hidden;
+}
+.my-notice-bar .my-notice-tag{
+  flex:none;background:var(--my-accent);color:#fff;
+  font-size:12px;font-weight:700;letter-spacing:.06em;
+  padding:2px 9px;border-radius:999px;
+}
+.my-notice-track{
+  display:flex;gap:36px;white-space:nowrap;
+  overflow:hidden;flex:1;
+  mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+}
+.my-notice-track span{opacity:.92}
+.my-notice-track b{color:#ffc9b0;font-weight:600}
+
+.my-site-header{
+  background:rgba(245,246,250,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--my-line);
+}
+.my-header-inner{
+  max-width:1220px;margin:0 auto;
+  padding:14px 24px;
+  display:flex;align-items:center;gap:26px;
+}
+.my-brand-mark{display:flex;align-items:center;gap:11px;flex:none}
+.my-brand-mark .my-logo-orb{
+  width:42px;height:42px;border-radius:13px;
+  background:linear-gradient(140deg,#1d2436,#3c4560);
+  display:grid;place-items:center;flex:none;
+  box-shadow:0 6px 16px rgba(29,36,54,.22);
+}
+.my-brand-mark .my-logo-orb svg{width:20px;height:20px}
+.my-brand-text b{display:block;font-size:17px;letter-spacing:.02em;line-height:1.3}
+.my-brand-text small{display:block;font-size:11.5px;color:var(--my-muted);letter-spacing:.14em}
+
+.my-nav{display:flex;gap:4px;flex:1;min-width:0}
+.my-nav a{
+  padding:7px 13px;border-radius:9px;font-size:14.5px;
+  color:var(--my-ink-soft);transition:.22s;white-space:nowrap;
+}
+.my-nav a:hover{background:#e9ecf5;color:var(--my-ink)}
+
+.my-search-wrap{position:relative;flex:none;width:236px}
+.my-search-wrap input{
+  width:100%;padding:9px 36px 9px 14px;border-radius:999px;
+  border:1px solid var(--my-line);background:#fff;
+  font-size:13.5px;outline:none;transition:.22s;color:var(--my-ink);
+}
+.my-search-wrap input:focus{border-color:var(--my-accent);box-shadow:0 0 0 3px rgba(255,122,69,.14)}
+.my-search-wrap .my-search-icon{
+  position:absolute;right:11px;top:50%;transform:translateY(-50%);
+  color:var(--my-muted);pointer-events:none;
+}
+.my-search-feedback{
+  position:absolute;left:0;right:0;top:calc(100% + 8px);
+  background:#fff;border:1px solid var(--my-line);border-radius:12px;
+  box-shadow:var(--my-shadow);padding:10px 12px;font-size:13px;
+  color:var(--my-ink-soft);display:none;
+}
+.my-search-feedback.is-open{display:block}
+.my-search-feedback b{color:var(--my-accent-deep)}
+
+.my-nav-toggle{
+  display:none;width:42px;height:42px;border-radius:11px;
+  background:#e9ecf5;align-items:center;justify-content:center;flex:none;
+}
+.my-nav-toggle span{display:block;width:18px;height:2px;background:var(--my-ink);position:relative}
+.my-nav-toggle span::before,.my-nav-toggle span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--my-ink);
+}
+.my-nav-toggle span::before{top:-6px}
+.my-nav-toggle span::after{top:6px}
+
+/* ============ 通用 ============ */
+.my-shell{max-width:1220px;margin:0 auto;padding:0 24px}
+.my-section{padding:66px 0}
+.my-section--tight{padding:48px 0}
+.my-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:700;letter-spacing:.16em;
+  color:var(--my-accent-deep);text-transform:uppercase;
+  margin-bottom:12px;
+}
+.my-eyebrow::before{content:"";width:26px;height:2px;background:var(--my-accent)}
+.my-h2{font-size:clamp(24px,3.1vw,34px);line-height:1.28;letter-spacing:-.01em;font-weight:800}
+.my-h2 em{font-style:normal;color:var(--my-accent-deep)}
+.my-section-head{margin-bottom:34px;max-width:760px}
+.my-section-head p{color:var(--my-muted);margin-top:12px;font-size:15px}
+.my-h3{font-size:17.5px;font-weight:700;line-height:1.45}
+
+.my-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 22px;border-radius:999px;font-size:14.5px;font-weight:600;
+  transition:.22s;border:1px solid transparent;
+}
+.my-btn--primary{background:var(--my-accent);color:#fff;box-shadow:0 8px 20px rgba(255,122,69,.28)}
+.my-btn--primary:hover{background:var(--my-accent-deep);transform:translateY(-1px)}
+.my-btn--ghost{background:#fff;border-color:var(--my-line);color:var(--my-ink)}
+.my-btn--ghost:hover{border-color:var(--my-accent);color:var(--my-accent-deep)}
+.my-btn--dark{background:var(--my-ink);color:#fff}
+.my-btn--dark:hover{background:#2c3752}
+
+/* ============ 首屏 ============ */
+.my-hero{padding:56px 0 24px}
+.my-hero-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+  gap:48px;align-items:center;
+}
+.my-hero h1{
+  font-size:clamp(40px,6.4vw,74px);
+  line-height:1.04;letter-spacing:-.03em;font-weight:900;
+  margin:14px 0 0;
+}
+.my-hero h1 .my-h1-slash{color:var(--my-accent)}
+.my-hero-lead{
+  margin-top:22px;font-size:16.5px;color:var(--my-ink-soft);max-width:520px;
+}
+.my-hero-intro{
+  margin-top:18px;font-size:14.5px;color:var(--my-muted);max-width:540px;
+  border-left:3px solid var(--my-accent);padding-left:16px;
+}
+.my-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.my-hero-stats{
+  margin-top:34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;padding-top:26px;border-top:1px dashed var(--my-line);
+}
+.my-hero-stats b{display:block;font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:-.02em}
+.my-hero-stats b i{font-style:normal;font-size:.5em;color:var(--my-muted);margin-left:3px;font-weight:600}
+.my-hero-stats span{font-size:12.5px;color:var(--my-muted)}
+
+.my-hero-visual{position:relative}
+.my-hero-frame{
+  position:relative;border-radius:24px;overflow:hidden;
+  box-shadow:0 26px 60px rgba(29,36,54,.20);
+  background:#1d2436;
+}
+.my-hero-frame img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.my-hero-badge{
+  position:absolute;left:18px;top:18px;z-index:2;
+  background:rgba(29,36,54,.78);backdrop-filter:blur(6px);
+  color:#fff;font-size:12px;font-weight:600;letter-spacing:.1em;
+  padding:7px 13px;border-radius:999px;display:flex;align-items:center;gap:7px;
+}
+.my-hero-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--my-accent);box-shadow:0 0 0 4px rgba(255,122,69,.28)}
+.my-hero-caption{
+  position:absolute;left:18px;right:18px;bottom:18px;z-index:2;
+  background:linear-gradient(180deg,rgba(29,36,54,0) 0%,rgba(29,36,54,.82) 62%);
+  border-radius:16px;padding:44px 18px 16px;color:#fff;
+}
+.my-hero-caption b{display:block;font-size:16px}
+.my-hero-caption span{font-size:12.5px;opacity:.8}
+.my-hero-float{
+  position:absolute;right:-10px;bottom:-18px;
+  background:#fff;border-radius:16px;padding:13px 18px;
+  box-shadow:var(--my-shadow);display:flex;align-items:center;gap:12px;
+}
+.my-hero-float .my-mini-ring{
+  width:38px;height:38px;border-radius:50%;flex:none;
+  background:conic-gradient(var(--my-accent) 0 72%,#eef1f8 72% 100%);
+  display:grid;place-items:center;font-size:10.5px;font-weight:800;color:var(--my-ink);
+}
+.my-hero-float div small{display:block;font-size:11.5px;color:var(--my-muted)}
+.my-hero-float div b{font-size:14px}
+
+/* ============ 关键词解析 ============ */
+.my-parse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}
+.my-parse-card{
+  background:var(--my-card);border-radius:var(--my-radius);
+  padding:28px 28px 26px;box-shadow:var(--my-shadow);
+  border-top:3px solid var(--my-accent);
+}
+.my-parse-card:nth-child(2){border-top-color:var(--my-cyan)}
+.my-parse-card:nth-child(3){border-top-color:#8a7bf0}
+.my-parse-card:nth-child(4){border-top-color:#e0b13c}
+.my-parse-card .my-h3{margin-bottom:10px}
+.my-parse-card p{font-size:14.5px;color:var(--my-ink-soft)}
+.my-parse-card p + p{margin-top:10px}
+
+/* ============ 焦点内容（大图 + 文字列表） ============ */
+.my-focus-grid{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:30px;align-items:start;
+}
+.my-focus-hero{
+  background:var(--my-card);border-radius:20px;overflow:hidden;
+  box-shadow:var(--my-shadow);display:flex;flex-direction:column;
+}
+.my-focus-hero img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.my-focus-body{padding:24px 26px 26px}
+.my-tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.my-tag{
+  font-size:11.5px;font-weight:700;letter-spacing:.05em;
+  padding:3px 10px;border-radius:999px;background:#eef1f8;color:var(--my-ink-soft);
+}
+.my-tag--accent{background:rgba(255,122,69,.14);color:var(--my-accent-deep)}
+.my-focus-body p{color:var(--my-muted);font-size:14px;margin-top:10px}
+.my-meta-line{
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+  margin-top:16px;font-size:12.5px;color:var(--my-muted);
+}
+.my-meta-line b{color:var(--my-ink-soft);font-weight:600}
+
+.my-vlist{display:flex;flex-direction:column;gap:14px}
+.my-vlist-item{
+  background:var(--my-card);border-radius:14px;padding:16px 18px;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;
+  box-shadow:0 4px 14px rgba(29,36,54,.055);transition:.22s;
+  border:1px solid transparent;
+}
+.my-vlist-item:hover{transform:translateY(-2px);border-color:rgba(255,122,69,.45);box-shadow:0 12px 26px rgba(29,36,54,.1)}
+.my-vlist-num{
+  width:34px;height:34px;border-radius:10px;flex:none;
+  background:#eef1f8;color:var(--my-ink-soft);
+  display:grid;place-items:center;font-size:13px;font-weight:800;
+}
+.my-vlist-item:first-child .my-vlist-num{background:var(--my-accent);color:#fff}
+.my-vlist-item h4{font-size:15px;line-height:1.45;font-weight:700}
+.my-vlist-item p{font-size:13px;color:var(--my-muted);margin-top:5px}
+.my-vlist-meta{font-size:12px;color:var(--my-muted);margin-top:8px;display:flex;flex-wrap:wrap;gap:12px}
+.my-mini-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.my-mini-btn{
+  font-size:12px;padding:4px 11px;border-radius:999px;
+  border:1px solid var(--my-line);background:#fff;color:var(--my-ink-soft);transition:.18s;
+}
+.my-mini-btn:hover{border-color:var(--my-accent);color:var(--my-accent-deep)}
+.my-mini-btn.is-liked{background:rgba(255,122,69,.14);border-color:var(--my-accent);color:var(--my-accent-deep)}
+.my-mini-btn.is-saved{background:rgba(63,182,200,.14);border-color:var(--my-cyan);color:#1f7f8d}
+
+/* ============ 视频卡片（三列） ============ */
+.my-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.my-vcard{
+  background:var(--my-card);border-radius:18px;overflow:hidden;
+  box-shadow:0 6px 20px rgba(29,36,54,.07);display:flex;flex-direction:column;
+  transition:.24s;
+}
+.my-vcard:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(29,36,54,.13)}
+.my-vcard-cover{position:relative}
+.my-vcard-cover img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.my-play-badge{
+  position:absolute;right:12px;bottom:12px;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.92);display:grid;place-items:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+.my-play-badge svg{width:14px;height:14px;margin-left:2px;fill:var(--my-ink)}
+.my-vcard-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.my-vcard-body h3{font-size:15.5px;line-height:1.45;font-weight:700}
+.my-vcard-body .my-vcard-desc{font-size:13px;color:var(--my-muted);margin-top:8px;flex:1}
+.my-vcard-foot{
+  margin-top:14px;padding-top:12px;border-top:1px dashed var(--my-line);
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+  font-size:12px;color:var(--my-muted);
+}
+.my-vcard-foot b{color:var(--my-ink-soft)}
+
+/* ============ 专题 ============ */
+.my-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.my-topic{
+  background:var(--my-card);border-radius:18px;padding:26px;
+  box-shadow:var(--my-shadow);display:flex;flex-direction:column;gap:14px;
+  border-left:4px solid var(--my-cyan);
+}
+.my-topic:nth-child(2){border-left-color:var(--my-accent)}
+.my-topic:nth-child(3){border-left-color:#8a7bf0}
+.my-topic-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.my-status{
+  flex:none;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+  background:rgba(63,182,200,.15);color:#1f7f8d;
+}
+.my-status--warm{background:rgba(255,122,69,.15);color:var(--my-accent-deep)}
+.my-status--violet{background:rgba(138,123,240,.16);color:#5f4fd1}
+.my-topic p.my-topic-desc{font-size:13.5px;color:var(--my-muted)}
+.my-topic ul{display:flex;flex-direction:column;gap:9px}
+.my-topic li{
+  font-size:13.5px;color:var(--my-ink-soft);
+  padding-left:18px;position:relative;
+}
+.my-topic li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:7px;height:7px;border-radius:2px;background:var(--my-line);
+}
+.my-topic li b{font-weight:700}
+
+/* ============ 创作者（双列简介） ============ */
+.my-author-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+}
+.my-author-card{
+  background:var(--my-card);border-radius:18px;padding:24px;
+  box-shadow:var(--my-shadow);display:grid;
+  grid-template-columns:auto minmax(0,1fr);gap:18px;
+}
+.my-avatar{
+  width:62px;height:62px;border-radius:20px;flex:none;
+  display:grid;place-items:center;font-size:22px;font-weight:800;color:#fff;
+}
+.my-avatar--a{background:linear-gradient(140deg,#ff7a45,#e05a25)}
+.my-avatar--b{background:linear-gradient(140deg,#3fb6c8,#1f7f8d)}
+.my-avatar--c{background:linear-gradient(140deg,#8a7bf0,#5f4fd1)}
+.my-avatar--d{background:linear-gradient(140deg,#e0b13c,#b4841a)}
+.my-avatar--e{background:linear-gradient(140deg,#1d2436,#3c4560)}
+.my-avatar--f{background:linear-gradient(140deg,#e0778f,#b84460)}
+.my-author-card h3{font-size:16px;font-weight:800;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.my-author-field{
+  font-size:11.5px;font-weight:700;color:var(--my-accent-deep);
+  background:rgba(255,122,69,.13);padding:2px 9px;border-radius:999px;
+}
+.my-author-nums{display:flex;gap:16px;margin-top:6px;font-size:12.5px;color:var(--my-muted)}
+.my-author-nums b{color:var(--my-ink);font-weight:700}
+.my-author-card p.my-author-bio{font-size:13.5px;color:var(--my-ink-soft);margin-top:9px}
+.my-author-link{
+  margin-top:11px;font-size:12.5px;font-weight:700;color:var(--my-accent-deep);
+  display:inline-flex;align-items:center;gap:5px;
+}
+
+/* ============ 评论（引用摘录） ============ */
+.my-quote-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.my-quote{
+  background:var(--my-card);border-radius:16px;padding:24px;
+  box-shadow:0 5px 18px rgba(29,36,54,.065);position:relative;
+}
+.my-quote::before{
+  content:"“";position:absolute;top:6px;right:20px;
+  font-size:52px;line-height:1;color:rgba(63,182,200,.22);font-family:Georgia,serif;
+}
+.my-quote p{font-size:14px;color:var(--my-ink-soft)}
+.my-quote footer{margin-top:14px;display:flex;align-items:center;gap:10px}
+.my-quote .my-avatar{width:34px;height:34px;border-radius:11px;font-size:13px}
+.my-quote footer b{font-size:13px;display:block}
+.my-quote footer small{font-size:11.5px;color:var(--my-muted)}
+
+/* ============ 数据榜单 ============ */
+.my-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.my-rank-card{
+  background:var(--my-card);border-radius:18px;padding:24px;
+  box-shadow:var(--my-shadow);
+}
+.my-rank-card .my-h3{margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.my-rank-card .my-h3 span{
+  width:24px;height:24px;border-radius:8px;background:#eef1f8;
+  display:grid;place-items:center;font-size:12px;color:var(--my-accent-deep);
+}
+.my-rank-list li{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 0;border-bottom:1px dashed var(--my-line);font-size:13.5px;
+}
+.my-rank-list li:last-child{border-bottom:none}
+.my-rank-idx{
+  width:20px;flex:none;font-size:13px;font-weight:800;color:var(--my-muted);
+}
+.my-rank-list li:nth-child(1) .my-rank-idx{color:var(--my-accent-deep)}
+.my-rank-list li:nth-child(2) .my-rank-idx{color:#b4841a}
+.my-rank-list li:nth-child(3) .my-rank-idx{color:#1f7f8d}
+.my-rank-list li span.my-rank-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.my-rank-list li em{font-style:normal;font-size:12px;color:var(--my-muted)}
+
+/* ============ 企业动态 & FAQ ============ */
+.my-split-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:30px;align-items:start}
+.my-news-list{display:flex;flex-direction:column;gap:14px}
+.my-news-item{
+  background:var(--my-card);border-radius:14px;padding:18px 20px;
+  box-shadow:0 4px 14px rgba(29,36,54,.06);
+  display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;
+}
+.my-news-date{font-size:12px;color:var(--my-muted);font-weight:600;padding-top:2px}
+.my-news-item h4{font-size:14.5px;font-weight:700;line-height:1.45}
+.my-news-item p{font-size:13px;color:var(--my-muted);margin-top:5px}
+
+.my-faq-list{display:flex;flex-direction:column;gap:10px}
+.my-faq-list details{
+  background:var(--my-card);border-radius:13px;
+  padding:0 20px;box-shadow:0 4px 14px rgba(29,36,54,.055);
+  transition:.2s;
+}
+.my-faq-list summary{
+  list-style:none;cursor:pointer;padding:16px 0;
+  font-size:14.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.my-faq-list summary::-webkit-details-marker{display:none}
+.my-faq-list summary::after{
+  content:"+";font-size:19px;font-weight:400;color:var(--my-accent-deep);flex:none;
+  transition:.2s;
+}
+.my-faq-list details[open] summary::after{transform:rotate(45deg)}
+.my-faq-list details p{font-size:13.5px;color:var(--my-muted);padding:0 0 16px}
+
+/* ============ 合作 & 投稿 ============ */
+.my-partner-strip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;
+}
+.my-partner{
+  background:var(--my-card);border-radius:14px;padding:20px 16px;
+  box-shadow:0 4px 14px rgba(29,36,54,.055);
+  text-align:center;transition:.22s;
+}
+.my-partner:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(29,36,54,.1)}
+.my-partner b{display:block;font-size:14px;font-weight:800;letter-spacing:.01em}
+.my-partner small{display:block;font-size:11.5px;color:var(--my-muted);margin-top:4px}
+
+.my-cta-band{
+  background:linear-gradient(120deg,#1d2436,#2c3752 60%,#1d2436);
+  border-radius:26px;padding:48px 44px;color:#fff;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center;
+}
+.my-cta-band h2{font-size:clamp(22px,2.8vw,30px);line-height:1.3;font-weight:800}
+.my-cta-band p{font-size:14.5px;opacity:.78;margin-top:12px;max-width:560px}
+.my-cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ============ 页脚 ============ */
+.my-footer{background:#161b29;color:#c4cbdc;padding:56px 0 0;margin-top:30px}
+.my-footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;
+  padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);
+}
+.my-footer .my-brand-text b{color:#fff}
+.my-footer .my-brand-text small{color:#8b94ab}
+.my-footer p.my-footer-desc{font-size:13.5px;color:#8b94ab;margin-top:16px;max-width:320px}
+.my-footer h4{font-size:13.5px;color:#fff;font-weight:700;margin-bottom:14px;letter-spacing:.04em}
+.my-footer ul li{font-size:13px;color:#8b94ab;padding:5px 0}
+.my-footer ul li a:hover{color:var(--my-accent)}
+.my-footer-bottom{
+  padding:22px 0 28px;display:flex;flex-wrap:wrap;justify-content:space-between;
+  gap:12px;font-size:12.5px;color:#717a92;
+}
+
+/* ============ 浮层 & Toast ============ */
+.my-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--my-ink);color:#fff;font-size:13.5px;font-weight:600;
+  padding:11px 22px;border-radius:999px;z-index:300;
+  opacity:0;pointer-events:none;transition:.28s;box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.my-toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+.my-modal{
+  position:fixed;inset:0;z-index:250;display:none;
+  align-items:center;justify-content:center;padding:24px;
+  background:rgba(23,28,42,.55);backdrop-filter:blur(4px);
+}
+.my-modal.is-open{display:flex}
+.my-modal-box{
+  background:#fff;border-radius:20px;max-width:520px;width:100%;
+  padding:30px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.3);
+  max-height:86vh;overflow:auto;
+}
+.my-modal-close{
+  position:absolute;right:16px;top:14px;width:32px;height:32px;
+  border-radius:50%;background:#eef1f8;color:var(--my-ink-soft);
+  font-size:17px;display:grid;place-items:center;
+}
+.my-modal-box h3{font-size:19px;font-weight:800;margin-bottom:10px}
+.my-modal-box p{font-size:14px;color:var(--my-muted);margin-bottom:16px}
+.my-modal-box label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.my-modal-box input,.my-modal-box textarea{
+  width:100%;padding:11px 14px;border-radius:11px;border:1px solid var(--my-line);
+  font-family:inherit;font-size:14px;margin-bottom:14px;outline:none;resize:vertical;
+}
+.my-modal-box input:focus,.my-modal-box textarea:focus{border-color:var(--my-accent);box-shadow:0 0 0 3px rgba(255,122,69,.13)}
+
+.my-top-btn{
+  position:fixed;right:24px;bottom:24px;z-index:120;
+  width:46px;height:46px;border-radius:50%;background:var(--my-ink);color:#fff;
+  display:grid;place-items:center;box-shadow:0 10px 26px rgba(29,36,54,.3);
+  opacity:0;pointer-events:none;transition:.28s;
+}
+.my-top-btn.is-show{opacity:1;pointer-events:auto}
+.my-top-btn:hover{background:var(--my-accent)}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .my-hero-grid{grid-template-columns:1fr;gap:34px}
+  .my-focus-grid{grid-template-columns:1fr}
+  .my-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .my-split-grid{grid-template-columns:1fr}
+  .my-rank-grid{grid-template-columns:1fr 1fr}
+  .my-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  :root{--my-header-h:98px}
+  .my-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--my-line);
+    padding:12px 20px;flex-direction:column;gap:2px;
+    box-shadow:0 20px 36px rgba(29,36,54,.12);
+  }
+  .my-nav.is-open{display:flex}
+  .my-header-inner{position:relative;flex-wrap:wrap;gap:12px}
+  .my-nav-toggle{display:flex;order:3;margin-left:auto}
+  .my-search-wrap{width:100%;order:4}
+  .my-brand-mark{order:1}
+  .my-nav{order:5}
+  .my-parse-grid,.my-topic-grid,.my-author-grid,.my-quote-grid{grid-template-columns:1fr}
+  .my-card-grid{grid-template-columns:1fr}
+  .my-rank-grid{grid-template-columns:1fr}
+  .my-partner-strip{grid-template-columns:1fr 1fr}
+  .my-cta-band{grid-template-columns:1fr;padding:34px 26px}
+  .my-section{padding:48px 0}
+}
+@media (max-width:560px){
+  .my-hero{padding:36px 0 12px}
+  .my-hero-stats{grid-template-columns:1fr 1fr;gap:14px}
+  .my-footer-grid{grid-template-columns:1fr}
+  .my-partner-strip{grid-template-columns:1fr}
+  .my-hero-float{position:static;margin-top:14px;width:100%}
+  .my-author-card{grid-template-columns:1fr}
+  .my-news-item{grid-template-columns:1fr;gap:6px}
+  .my-notice-bar{font-size:12.5px;padding:8px 12px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ============ 吸顶公告 + 页头 ============ -->
+<div class="my-sticky-shell">
+  <div class="my-notice-bar" role="status" aria-label="品牌公告条">
+    <span class="my-notice-tag">官方发布</span>
+    <div class="my-notice-track">
+      <span><b>孟若羽作品在线观看</b> 冬季创作季专题上线，首批 12 部原创短片已同步高清更新</span>
+      <span>创作挑战赛「城市微光」报名开启，投稿截止 12 月 20 日</span>
+      <span>官方创作者社区新增作品下载与素材共享功能，欢迎参与公测</span>
+    </div>
+  </div>
+
+  <header class="my-site-header" id="my-top">
+    <div class="my-header-inner">
+      <a class="my-brand-mark" href="#my-top" aria-label="孟若羽作品在线观看官方网站首页">
+        <span class="my-logo-orb" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5 L19 12 L8 18.5 Z" fill="#ff7a45"/></svg>
+        </span>
+        <span class="my-brand-text">
+          <b>孟若羽作品在线观看</b>
+          <small>官方影像门户</small>
+        </span>
+      </a>
+
+      <nav class="my-nav" id="my-nav" aria-label="主导航">
+        <a href="#my-focus">精选</a>
+        <a href="#my-videos">作品</a>
+        <a href="#my-topics">专题</a>
+        <a href="#my-authors">创作者</a>
+        <a href="#my-ranking">榜单</a>
+        <a href="#my-news">企业动态</a>
+        <a href="#my-faq">帮助</a>
+      </nav>
+
+      <div class="my-search-wrap">
+        <label for="my-search-input" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">搜索作品或创作者</label>
+        <input type="search" id="my-search-input" placeholder="搜索作品 / 创作者 / 专题" autocomplete="off">
+        <span class="my-search-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </span>
+        <div class="my-search-feedback" id="my-search-feedback" role="status" aria-live="polite"></div>
+      </div>
+
+      <button class="my-nav-toggle" id="my-nav-toggle" aria-label="展开或收起导航" aria-expanded="false" aria-controls="my-nav">
+        <span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- ============ S2 品牌首屏 ============ -->
+  <section class="my-hero" aria-labelledby="my-hero-title">
+    <div class="my-shell">
+      <div class="my-hero-grid">
+        <div>
+          <span class="my-eyebrow">Official Brand Portal · 官方品牌门户</span>
+          <h1 id="my-hero-title">孟若羽作品在线观看<span class="my-h1-slash">。</span></h1>
+          <p class="my-hero-lead">从一部短片出发，走进一个持续生长的原创影像社区。这里是孟若羽作品的官方网站，也是所有愿意讲真故事的人共同的品牌阵地。</p>
+          <p class="my-hero-intro">作为专注人物影像与城市叙事的垂直领域品牌，我们深耕原创内容九年，以专业制作与真实表达搭建高品质内容生态。平台持续运营孟若羽全部正版高清作品，并向社区创作者开放投稿、比赛与共创项目，坚持以用户至上、匠心制作的姿态，让每一段影像都被值得信赖地看见。</p>
+
+          <div class="my-hero-actions">
+            <a class="my-btn my-btn--primary" href="#my-focus">观看精选作品</a>
+            <a class="my-btn my-btn--ghost" href="#my-authors">认识创作者</a>
+            <button class="my-btn my-btn--ghost" type="button" data-my-open="my-submit-modal">投稿入口</button>
+          </div>
+
+          <div class="my-hero-stats">
+            <div>
+              <b data-my-count="268">0<i>部</i></b>
+              <span>正版高清作品</span>
+            </div>
+            <div>
+              <b data-my-count="12600">0<i>+</i></b>
+              <span>社区创作者</span>
+            </div>
+            <div>
+              <b data-my-count="97">0<i>%</i></b>
+              <span>用户口碑好评</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-hero-visual">
+          <div class="my-hero-frame">
+            <span class="my-hero-badge">本期首映</span>
+            <img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23212a44'/%3E%3Cstop offset='60' stop-color='%233a4a72'/%3E%3Cstop offset='100' stop-color='%23ef8a5a'/%3E%3C/linearGradient%3E%3ClinearGradient id='water' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f6b48a'/%3E%3Cstop offset='100' stop-color='%23262e4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23sky)'/%3E%3Ccircle cx='590' cy='196' r='58' fill='%23ffd9b8' opacity='.92'/%3E%3Cpath d='M0 330 L120 292 L230 322 L340 268 L470 318 L600 274 L720 312 L800 288 L800 550 L0 550 Z' fill='%231a2238'/%3E%3Cpath d='M0 386 L150 356 L300 384 L440 344 L580 380 L700 350 L800 372 L800 550 L0 550 Z' fill='%2312182a'/%3E%3Crect y='410' width='800' height='140' fill='url(%23water)' opacity='.85'/%3E%3Cg stroke='%23ffd3b6' stroke-width='3' opacity='.55'%3E%3Cpath d='M520 420 h220'/%3E%3Cpath d='M560 448 h150'/%3E%3Cpath d='M600 476 h96'/%3E%3C/g%3E%3Cg fill='%230e1422'%3E%3Cpath d='M250 410 l14 -54 l14 54 z'/%3E%3Crect x='258' y='404' width='12' height='30'/%3E%3C/g%3E%3Cg opacity='.7' fill='%23ffffff'%3E%3Ccircle cx='120' cy='96' r='2.4'/%3E%3Ccircle cx='210' cy='64' r='1.8'/%3E%3Ccircle cx='330' cy='120' r='2.2'/%3E%3Ccircle cx='700' cy='78' r='2'/%3E%3Ccircle cx='640' cy='140' r='1.6'/%3E%3C/g%3E%3C/svg%3E"
+              alt="孟若羽作品《城市微光》首映画面：黄昏河岸与远岸灯火的城市剪影" width="800" height="550" loading="eager">
+            <div class="my-hero-caption">
+              <b>《城市微光》第 3 集 · 河岸上的夜行者</b>
+              <span>孟若羽 · 城市纪事系列 · 4K 高清 · 18:42</span>
+            </div>
+          </div>
+          <div class="my-hero-float">
+            <div class="my-mini-ring">97%</div>
+            <div>
+              <small>社区口碑好评率</small>
+              <b>值得信赖的原创影像</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S3 焦点内容（大图 + 文字列表） ============ -->
+  <section class="my-section" id="my-focus" aria-labelledby="my-focus-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Focus Selection</span>
+        <h2 class="my-h2" id="my-focus-title">本周焦点 · <em>值得反复观看的孟若羽作品</em></h2>
+        <p>由官方编辑与社区共同推荐，聚焦人物、城市与生活的真实切片。所有条目均为正版高清资源，支持收藏与评论互动。</p>
+      </div>
+
+      <div class="my-focus-grid">
+        <article class="my-focus-hero">
+          <img
+            src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 405'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231c2438'/%3E%3Cstop offset='100' stop-color='%233f4f7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='405' fill='url(%23g1)'/%3E%3Crect x='54' y='42' width='612' height='321' fill='none' stroke='%23ff9c73' stroke-width='1.6' opacity='.5'/%3E%3Ccircle cx='360' cy='196' r='92' fill='none' stroke='%233fb6c8' stroke-width='1.4' opacity='.55'/%3E%3Ccircle cx='360' cy='196' r='54' fill='%23ff7a45' opacity='.9'/%3E%3Cpath d='M344 168 L392 196 L344 224 Z' fill='%231c2438'/%3E%3Cg fill='%23ffffff' opacity='.55'%3E%3Crect x='54' y='330' width='100' height='4'/%3E%3Crect x='170' y='330' width='46' height='4'/%3E%3Crect x='566' y='52' width='100' height='4'/%3E%3C/g%3E%3Cg fill='%23ffb59b' opacity='.7' font-family='sans-serif'%3E%3Ctext x='60' y='316' font-size='13'%3ERUOYU FILM · 2026%3C/text%3E%3C/g%3E%3C/svg%3E"
+            alt="孟若羽作品《回声档案》封面：深蓝背景上的圆形播放标识与胶片边框" width="720" height="405" loading="lazy">
+          <div class="my-focus-body">
+            <div class="my-tag-row">
+              <span class="my-tag my-tag--accent">官方首推</span>
+              <span class="my-tag">人物访谈</span>
+              <span class="my-tag">4K 高清</span>
+            </div>
+            <h3 class="my-h3">《回声档案》第一季：在小城录音棚里，听见八个人的十年</h3>
+            <p>孟若羽用四十分钟记录一间开了十一年的录音棚。老板老陈记得每位客人的习惯，也记得八位曾经在这里录过第一首歌的人。影片不做煽情，只让声音自己在空房间里回荡。上线三天，社区播放量突破 41 万，评论区里出现了许多“我也在这录过”的投稿。</p>
+            <div class="my-meta-line">
+              <span>作者 <b>孟若羽</b></span>
+              <span>41.2 万播放</span>
+              <span><b>2.8 万</b> 点赞</span>
+              <span>收藏 1.1 万</span>
+            </div>
+            <div class="my-mini-actions">
+              <button class="my-mini-btn" type="button" data-my-like>♡ 点赞</button>
+              <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+              <button class="my-mini-btn" type="button" data-my-copy data-title="《回声档案》第一季">复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="my-vlist" id="my-videos">
+          <article class="my-vlist-item">
+            <span class="my-vlist-num">01</span>
+            <div>
+              <h4>《夜班公交》· 城市纪事系列第 7 集</h4>
+              <p>跟随末班车司机跑完一圈 36 公里的环线，记录凌晨一点到四点的城市表情。</p>
+              <div class="my-vlist-meta"><span>孟若羽</span><span>24.6 万播放</span><span>收藏 6,320</span></div>
+              <div class="my-mini-actions">
+                <button class="my-mini-btn" type="button" data-my-like>♡ 点赞</button>
+                <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="my-vlist-item">
+            <span class="my-vlist-num">02</span>
+            <div>
+              <h4>《一张桌子的二十年》· 家居与生活记录</h4>
+              <p>从二手市场淘来的旧木桌，被三代人用过。孟若羽用微距镜头讲述木头上的划痕。</p>
+              <div class="my-vlist-meta"><span>孟若羽</span><span>18.9 万播放</span><span>收藏 4,804</span></div>
+              <div class="my-mini-actions">
+                <button class="my-mini-btn" type="button" data-my-like>♡ 点赞</button>
+                <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="my-vlist-item">
+            <span class="my-vlist-num">03</span>
+            <div>
+              <h4>《给我三分钟》· 创作幕后拆解</h4>
+              <p>一支 3 分钟短片的完整诞生过程：分镜、勘景、收音失败与重拍，全部保留。</p>
+              <div class="my-vlist-meta"><span>孟若羽工作室</span><span>15.3 万播放</span><span>收藏 5,117</span></div>
+              <div class="my-mini-actions">
+                <button class="my-mini-btn" type="button" data-my-like>♡ 点赞</button>
+                <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="my-vlist-item">
+            <span class="my-vlist-num">04</span>
+            <div>
+              <h4>《菜市场的清晨五点》· 城市探索</h4>
+              <p>在批发市场蹲守四个清晨，拍下摊主们开灯、摆货、算账的第一小时。</p>
+              <div class="my-vlist-meta"><span>孟若羽</span><span>21.7 万播放</span><span>收藏 5,690</span></div>
+              <div class="my-mini-actions">
+                <button class="my-mini-btn" type="button" data-my-like>♡ 点赞</button>
+                <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+          <article class="my-vlist-item">
+            <span class="my-vlist-num">05</span>
+            <div>
+              <h4>《她说慢一点》· 情感故事短片</h4>
+              <p>关于母女之间难以开口的十分钟，全片仅两个长镜头，被社区称为“最安静的对话”。</p>
+              <div class="my-vlist-meta"><span>孟若羽</span><span>13.5 万播放</span><span>收藏 3,922</span></div>
+              <div class="my-mini-actions">
+                <button class="my-mini-btn" type="button" data-my-like>♡ 点赞</button>
+                <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S6 关键词深度解析（800字以上） ============ -->
+  <section class="my-section my-section--tight" id="my-analysis" aria-labelledby="my-analysis-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Brand Insight</span>
+        <h2 class="my-h2" id="my-analysis-title">为什么“孟若羽作品在线观看”<em>值得被认真对待</em></h2>
+        <p>这不是一个简单的片单关键词。它背后是一套关于原创、正版与社区共建的长期方法论。</p>
+      </div>
+
+      <div class="my-parse-grid">
+        <article class="my-parse-card">
+          <h3 class="my-h3">一、从“可看”到“值得看”：孟若羽作品的定位</h3>
+          <p>很多用户搜索“孟若羽作品在线观看”，最初只是想找一部能安静看完的短片。但真正进入这个官方网站之后会发现，这里的每一部作品都被放进了一套完整的观看秩序：清晰的选题分类、统一的画质标准、可追溯的创作时间线，以及每部影片下方保留的完整制作信息。</p>
+          <p>孟若羽的影像几乎没有宏大叙事，他偏爱把镜头对准那些不重要的人。夜班公交司机、录音棚老板、菜市场摊主、旧木桌的修补匠——这些人物在主流视野里往往只有几秒钟镜头。而在孟若羽作品在线观看的官方片库中，他们各自拥有完整的十几分钟。平台坚持把这些作品做正版高清修复与字幕校对，因为我们认为，真实本身就值得更高规格的呈现。</p>
+          <p>从内容生态角度看，这种选择并不轻松。人物纪实类短片的制作周期长、成本高，单条内容的商业回馈也远低于流量向内容。但品牌仍持续投入，原因很简单：一个内容生态如果只剩下热点复述，它就没有办法陪用户长期成长。我们希望这个官方网站提供的不是一次性消费，而是一份可以反复回来翻看的影像档案。</p>
+        </article>
+
+        <article class="my-parse-card">
+          <h3 class="my-h3">二、正版与高清：平台品质底线的三个细节</h3>
+          <p>谈到“在线观看”，用户最关心两件事：画质和版权。这也是我们作为企业最不敢懈怠的部分。第一是片源管理，孟若羽全部作品由官方统一归档，分原始工程、调色版、上线版三层存储，任何一次重新上线都必须经过母版核验，避免出现压缩失真或裁切错误。</p>
+          <p>第二是播放体验。网站对高清片源做了自适应处理，弱网环境下会优先保证声音连续，再逐步回填画面清晰度，这让许多在通勤路上用手机观看的用户也能完整看完一部十八分钟的短片。第三是版权说明，每部作品页面都注明出品方、拍摄年份、授权范围与二次使用规则，方便学校、社区和公益机构申请非商业放映。</p>
+          <p>这些细节看上去琐碎，却构成了品牌口碑的基石。截至本季度，官方片库中标注“4K 高清”的孟若羽作品已达 96 部，专业调色复核覆盖全部重点片目。社区里有创作者说，正是因为我们把一部冷门短片重新做了声轨修复，他才决定把自己的毕业作品投到平台来。这种相互信任，是任何流量手段都换不来的。</p>
+        </article>
+
+        <article class="my-parse-card">
+          <h3 class="my-h3">三、社区的力量：观众、创作者与企业的三方共建</h3>
+          <p>孟若羽作品在线观看并不只是一个播放页面，它同时是一处持续运营的社区。观众在评论区留下自己的故事，创作者在投稿区上传新的尝试，运营团队则负责整理、回应与归档。三者之间形成了一种不喧哗但稳定的循环。</p>
+          <p>以本季度的“城市微光”创作品牌挑战为例，活动上线 18 天，收到 642 份投稿，其中 137 份来自首次投稿的新创作者。我们把入选作品与孟若羽的代表作放在同一专题中展映，不少新作者因此获得了第一批真实反馈。有投稿者在留言里写：“第一次有人认真看完我的片子，并且指出第三分钟收音有问题。”这类反馈，正是我们设立投稿入口与评论机制的本意。</p>
+          <p>企业层面的支持同样重要。平台承担了服务器、转码与版权审核成本，也安排了每月一次的创作者线上交流会，由孟若羽本人或工作室成员参与答疑。我们不承诺每个人都能成为知名创作者，但希望每一位认真拍摄的人，都能在这个内容生态里被公平地看见。这也是“用户首选”“值得信赖”这些评价词真正的来源。</p>
+        </article>
+
+        <article class="my-parse-card">
+          <h3 class="my-h3">四、长期主义：品牌如何持续运营一个影像社区</h3>
+          <p>做一个视频网站不难，难的是九年如一日地维护它的品质与温度。孟若羽作品在线观看从最初的一个个人作品页，发展成今天的品牌官方网站，靠的不是爆发式的推广，而是持续的内容更新、稳定的社区规则和透明的沟通机制。</p>
+          <p>我们建立了内容更新日志，每一次片库调整、功能迭代、规则变更都会在“企业动态”中公开说明；我们保留了社区早年的用户评价，即使其中有些批评很尖锐，因为那是品牌成长的真实切片；我们也把每年的部分作品授权给公益机构放映，让影像的社会责任落到实处。这些动作在短期内不会带来明显增长，但它们让这个平台拥有了别的网站难以复制的气质。</p>
+          <p>对用户而言，搜索“孟若羽作品在线观看”之后得到的，应该是一个可以放心停留的地方：画质清晰、来源正版、评论有回应、投稿有去处。我们深知这个目标永远在路上，所以会继续以匠心打磨每一部作品，以包容接纳每一种表达，让这个官方网站成为创作者与观众共同陪伴、共同成长的精神角落。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 视频三列卡片 ============ -->
+  <section class="my-section" aria-labelledby="my-more-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Library</span>
+        <h2 class="my-h2" id="my-more-title">继续观看 · <em>孟若羽作品精选片库</em></h2>
+        <p>按主题整理的近期上线作品，均可在线高清播放。点击卡片右上角可直接收藏，方便下次回来继续看。</p>
+      </div>
+
+      <div class="my-card-grid">
+        <article class="my-vcard">
+          <div class="my-vcard-cover">
+            <img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23eff4f4'/%3E%3Crect x='0' y='240' width='640' height='120' fill='%23cfe3e2'/%3E%3Ccircle cx='140' cy='132' r='62' fill='%233fb6c8' opacity='.85'/%3E%3Cpath d='M0 268 L110 224 L220 262 L330 210 L450 258 L560 214 L640 246 L640 360 L0 360 Z' fill='%232f6f77' opacity='.72'/%3E%3Cg stroke='%23ffffff' stroke-width='2' opacity='.65'%3E%3Cpath d='M60 300 h180'/%3E%3Cpath d='M420 300 h160'/%3E%3C/g%3E%3Ccircle cx='500' cy='110' r='34' fill='%23ff7a45' opacity='.9'/%3E%3C/svg%3E"
+              alt="孟若羽作品《海边的第七天》封面：浅青色调的海面与橙色日轮" width="640" height="360" loading="lazy">
+            <span class="my-play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          </div>
+          <div class="my-vcard-body">
+            <h3>《海边的第七天》：一个人在海边住了七天</h3>
+            <p class="my-vcard-desc">没有旁白，只有潮声和偶尔入镜的渔民。孟若羽用七天时间完成一次极简的自我整理。</p>
+            <div class="my-vcard-foot">
+              <span><b>孟若羽</b> · 22.4 万播放</span>
+              <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="my-vcard">
+          <div class="my-vcard-cover">
+            <img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23fdf1e8'/%3E%3Crect x='70' y='70' width='500' height='220' rx='12' fill='%23ffffff' stroke='%23e7d6c6' stroke-width='2'/%3E%3Crect x='110' y='120' width='180' height='14' rx='7' fill='%23ff7a45' opacity='.8'/%3E%3Crect x='110' y='152' width='300' height='10' rx='5' fill='%23d8c7b8'/%3E%3Crect x='110' y='176' width='260' height='10' rx='5' fill='%23d8c7b8'/%3E%3Crect x='110' y='200' width='320' height='10' rx='5' fill='%23e6d9cd'/%3E%3Ccircle cx='480' cy='160' r='52' fill='%23ffb98f'/%3E%3Cpath d='M462 138 L500 160 L462 182 Z' fill='%23ffffff'/%3E%3C/svg%3E"
+              alt="孟若羽作品《给未来的信》封面：米色信纸与橙色标题块构成的平面图形" width="640" height="360" loading="lazy">
+            <span class="my-play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          </div>
+          <div class="my-vcard-body">
+            <h3>《给未来的信》：十二位陌生人写给十年后的自己</h3>
+            <p class="my-vcard-desc">一次线下征集，一沓手写信。孟若羽把信念读出来，让文字变成可以被听见的时间。</p>
+            <div class="my-vcard-foot">
+              <span><b>孟若羽</b> · 19.1 万播放</span>
+              <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="my-vcard">
+          <div class="my-vcard-cover">
+            <img
+              src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='n1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d2436'/%3E%3Cstop offset='100' stop-color='%2355607f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23n1)'/%3E%3Cg fill='%23ffcf9e' opacity='.9'%3E%3Ccircle cx='120' cy='90' r='4'/%3E%3Ccircle cx='210' cy='150' r='3'/%3E%3Ccircle cx='330' cy='78' r='4'/%3E%3Ccircle cx='470' cy='130' r='3'/%3E%3Ccircle cx='560' cy='86' r='4'/%3E%3C/g%3E%3Cpath d='M0 300 L150 240 L300 292 L450 236 L640 288 L640 360 L0 360 Z' fill='%2312182a'/%3E%3Crect x='280' y='180' width='80' height='80' rx='14' fill='%23ff7a45' opacity='.92'/%3E%3Cpath d='M308 206 L340 220 L308 234 Z' fill='%231d2436'/%3E%3C/svg%3E"
+              alt="孟若羽作品《深夜放映室》封面：深色夜色中的橙色方形播放标识" width="640" height="360" loading="lazy">
+            <span class="my-play-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          </div>
+          <div class="my-vcard-body">
+            <h3>《深夜放映室》：他在县城开了家免费电影院</h3>
+            <p class="my-vcard-desc">每周三晚八点，老周把投影搬到院子里。孟若羽记录了这个持续六年的小小坚持。</p>
+            <div class="my-vcard-foot">
+              <span><b>孟若羽</b> · 27.8 万播放</span>
+              <button class="my-mini-btn" type="button" data-my-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S4 专题 / 企划 ============ -->
+  <section class="my-section my-section--tight" id="my-topics" aria-labelledby="my-topics-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Series &amp; Projects</span>
+        <h2 class="my-h2" id="my-topics-title">专题企划 · <em>把零散作品连成线索</em></h2>
+        <p>专题是孟若羽作品在线观看的核心组织方式。每个专题由官方策展，持续更新，并开放社区共创条目。</p>
+      </div>
+
+      <div class="my-topic-grid">
+        <article class="my-topic">
+          <div class="my-topic-head">
+            <h3 class="my-h3">城市微光 · 夜间职业系列</h3>
+            <span class="my-status">更新中 4/6</span>
+          </div>
+          <p class="my-topic-desc">把镜头交给城市熄灯之后仍在工作的人。每一集聚焦一个夜间职业，全长 15 至 20 分钟，已上线《夜班公交》《深夜放映室》《代驾最后一百米》《便利店零点交接》。</p>
+          <ul>
+            <li><b>《便利店零点交接》</b> — 两个店员交接班时聊起的十年变化</li>
+            <li><b>《代驾最后一百米》</b> — 送到小区门口之后的那段路</li>
+            <li><b>《夜班公交》</b> — 36 公里环线与城市凌晨表情</li>
+          </ul>
+          <button class="my-btn my-btn--ghost" type="button" data-my-open="my-share-modal">分享专题</button>
+        </article>
+
+        <article class="my-topic">
+          <div class="my-topic-head">
+            <h3 class="my-h3">手的记忆 · 手作与匠人短片</h3>
+            <span class="my-status my-status--warm">已完结 5/5</span>
+          </div>
+          <p class="my-topic-desc">五支短片，五种手艺：修表、补伞、制陶、拓印、糊灯笼。孟若羽坚持不用解说词，只保留工具与手部动作的环境声，让观众自己听出时间。</p>
+          <ul>
+            <li><b>《补伞人》</b> — 一把旧伞被修了四次，主人不肯换</li>
+            <li><b>《七十二道工序》</b> — 制陶师傅的一天，从揉泥开始</li>
+            <li><b>《灯的骨架》</b> — 元宵前夜，糊灯笼的最后一道细活</li>
+          </ul>
+          <button class="my-btn my-btn--ghost" type="button" data-my-open="my-share-modal">分享专题</button>
+        </article>
+
+        <article class="my-topic">
+          <div class="my-topic-head">
+            <h3 class="my-h3">回声档案 · 人物访谈计划</h3>
+            <span class="my-status my-status--violet">筹备中 2/5</span>
+          </div>
+          <p class="my-topic-desc">邀请在不同行业工作了十年以上的人，聊他们最不想放弃的一件事。访谈不设固定问题，剪辑保留停顿与沉默，社区可提交下一期嘉宾提名。</p>
+          <ul>
+            <li><b>《录音棚的第十一年》</b> — 老陈与八位客人的第一首歌</li>
+            <li><b>《在菜场记账三十年》</b> — 一本手写账本的重量</li>
+            <li><b>《值班室的灯》</b> — 社区医院夜班护士的十年</li>
+          </ul>
+          <button class="my-btn my-btn--ghost" type="button" data-my-open="my-submit-modal">提名嘉宾</button>
+        </article>
+
+        <article class="my-topic">
+          <div class="my-topic-head">
+            <h3 class="my-h3">社区共创 · 城市微光挑战</h3>
+            <span class="my-status">报名中</span>
+          </div>
+          <p class="my-topic-desc">面向所有创作者的公开企划：用 5 分钟讲一个你身边“不被注意的人”。入选作品将进入官方专题展映，并获得高清转码支持与一对一剪辑反馈。</p>
+          <ul>
+            <li><b>投稿截止</b> — 12 月 20 日，接受手机与相机拍摄</li>
+            <li><b>评审维度</b> — 选题真实度、叙事完整度、声音处理</li>
+            <li><b>展映安排</b> — 入选作品于次年 1 月在官方网站专题页上线</li>
+          </ul>
+          <button class="my-btn my-btn--primary" type="button" data-my-open="my-submit-modal">立即报名投稿</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S5 创作者矩阵（双列简介） ============ -->
+  <section class="my-section" id="my-authors" aria-labelledby="my-authors-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Creators</span>
+        <h2 class="my-h2" id="my-authors-title">创作者矩阵 · <em>让专业的人被看见</em></h2>
+        <p>他们中有导演、剪辑师、声音设计师，也有刚完成第一部短片的普通记录者。点击“查看档案”可了解其擅长领域与合作方式。</p>
+      </div>
+
+      <div class="my-author-grid">
+        <article class="my-author-card">
+          <div class="my-avatar my-avatar--a" aria-hidden="true">孟</div>
+          <div>
+            <h3>孟若羽 <span class="my-author-field">人物纪实</span></h3>
+            <div class="my-author-nums"><span><b>96</b> 部作品</span><span><b>38.6 万</b> 关注</span></div>
+            <p class="my-author-bio">纪录片导演，本站品牌主理人。擅长在有限场景里捕捉人物的自然状态，坚持实景收音与自然光拍摄。早年做过三年电台后期，这段经历让他的影像总带着一种“听得见呼吸”的质感。近三年持续拍摄城市夜间职业系列。</p>
+            <button class="my-author-link" type="button" data-my-open="my-author-modal" data-author="孟若羽">查看档案 →</button>
+          </div>
+        </article>
+
+        <article class="my-author-card">
+          <div class="my-avatar my-avatar--b" aria-hidden="true">林</div>
+          <div>
+            <h3>林知夏 <span class="my-author-field">声音设计</span></h3>
+            <div class="my-author-nums"><span><b>41</b> 部作品</span><span><b>12.4 万</b> 关注</span></div>
+            <p class="my-author-bio">声音设计师，负责站内多部重点作品的现场收音与环境声重建。她认为声音是影像里最容易被忽略、也最诚实的一部分。曾用一个月时间复原一条老街的清晨声景，相关短片在社区播放超过二十万次。</p>
+            <button class="my-author-link" type="button" data-my-open="my-author-modal" data-author="林知夏">查看档案 →</button>
+          </div>
+        </article>
+
+        <article class="my-author-card">
+          <div class="my-avatar my-avatar--c" aria-hidden="true">周</div>
+          <div>
+            <h3>周与川 <span class="my-author-field">剪辑叙事</span></h3>
+            <div class="my-author-nums"><span><b>58</b> 部作品</span><span><b>9.7 万</b> 关注</span></div>
+            <p class="my-author-bio">剪辑师，擅长把大量素材压缩成克制的节奏。他参与剪辑的《回声档案》第一季被社区评价为“看不出剪辑痕迹”。日常会在平台发布剪辑思路拆解，是新人创作者最常请教的作者之一，也是投稿区的常驻点评人。</p>
+            <button class="my-author-link" type="button" data-my-open="my-author-modal" data-author="周与川">查看档案 →</button>
+          </div>
+        </article>
+
+        <article class="my-author-card">
+          <div class="my-avatar my-avatar--d" aria-hidden="true">苏</div>
+          <div>
+            <h3>苏晚舟 <span class="my-author-field">城市探索</span></h3>
+            <div class="my-author-nums"><span><b>33</b> 部作品</span><span><b>7.2 万</b> 关注</span></div>
+            <p class="my-author-bio">城市影像创作者，偏爱步行与公交视角的城市观察。她用一个夏天拍完了本地十二条公交线路的终点站，被社区称为“最会坐公交的导演”。作品多为短篇幅，节奏轻快，适合通勤时观看。</p>
+            <button class="my-author-link" type="button" data-my-open="my-author-modal" data-author="苏晚舟">查看档案 →</button>
+          </div>
+        </article>
+
+        <article class="my-author-card">
+          <div class="my-avatar my-avatar--e" aria-hidden="true">何</div>
+          <div>
+            <h3>何砚青 <span class="my-author-field">摄影指导</span></h3>
+            <div class="my-author-nums"><span><b>47</b> 部作品</span><span><b>6.8 万</b> 关注</span></div>
+            <p class="my-author-bio">摄影指导，以自然光和手持镜头见长。他坚持“镜头先退一步”，让人物在自己的空间里自由活动。参与拍摄的《海边的第七天》几乎全部使用单机位完成，画面克制而稳定，是平台画质标准的参考片目之一。</p>
+            <button class="my-author-link" type="button" data-my-open="my-author-modal" data-author="何砚青">查看档案 →</button>
+          </div>
+        </article>
+
+        <article class="my-author-card">
+          <div class="my-avatar my-avatar--f" aria-hidden="true">许</div>
+          <div>
+            <h3>许知言 <span class="my-author-field">社区记录</span></h3>
+            <div class="my-author-nums"><span><b>21</b> 部作品</span><span><b>4.1 万</b> 关注</span></div>
+            <p class="my-author-bio">从观众成长为创作者的社区代表。第一部作品是用手机拍的邻居奶奶，被官方专题收录后开始系统学习剪辑。她的作品保留了大量生活毛边，却不失完整叙事，常被新人当作“从零开始”的参考样本。</p>
+            <button class="my-author-link" type="button" data-my-open="my-author-modal" data-author="许知言">查看档案 →</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S6 数据榜单 + 评论引用 ============ -->
+  <section class="my-section my-section--tight" id="my-ranking" aria-labelledby="my-ranking-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Ranking &amp; Voice</span>
+        <h2 class="my-h2" id="my-ranking-title">榜单与口碑 · <em>社区共同写下的评价</em></h2>
+        <p>榜单每周一更新，口径公开：播放、收藏、完播率与评论质量综合计算。下方同时收录不同维度的用户评价。</p>
+      </div>
+
+      <div class="my-rank-grid">
+        <article class="my-rank-card">
+          <h3 class="my-h3"><span>热</span>本周热度榜</h3>
+          <ul class="my-rank-list">
+            <li><span class="my-rank-idx">1</span><span class="my-rank-name">深夜放映室</span><em>27.8 万</em></li>
+            <li><span class="my-rank-idx">2</span><span class="my-rank-name">夜班公交</span><em>24.6 万</em></li>
+            <li><span class="my-rank-idx">3</span><span class="my-rank-name">海边的第七天</span><em>22.4 万</em></li>
+            <li><span class="my-rank-idx">4</span><span class="my-rank-name">菜市场的清晨五点</span><em>21.7 万</em></li>
+            <li><span class="my-rank-idx">5</span><span class="my-rank-name">给未来的信</span><em>19.1 万</em></li>
+          </ul>
+        </article>
+
+        <article class="my-rank-card">
+          <h3 class="my-h3"><span>新</span>新人榜</h3>
+          <ul class="my-rank-list">
+            <li><span class="my-rank-idx">1</span><span class="my-rank-name">许知言</span><em>首次投稿</em></li>
+            <li><span class="my-rank-idx">2</span><span class="my-rank-name">阿禾的记录本</span><em>3 部作品</em></li>
+            <li><span class="my-rank-idx">3</span><span class="my-rank-name">夜行公交站</span><em>2 部作品</em></li>
+            <li><span class="my-rank-idx">4</span><span class="my-rank-name">南方小院</span><em>4 部作品</em></li>
+            <li><span class="my-rank-idx">5</span><span class="my-rank-name">慢半拍工作室</span><em>2 部作品</em></li>
+          </ul>
+        </article>
+
+        <article class="my-rank-card">
+          <h3 class="my-h3"><span>碑</span>口碑榜</h3>
+          <ul class="my-rank-list">
+            <li><span class="my-rank-idx">1</span><span class="my-rank-name">回声档案</span><em>9.6 分</em></li>
+            <li><span class="my-rank-idx">2</span><span class="my-rank-name">补伞人</span><em>9.5 分</em></li>
+            <li><span class="my-rank-idx">3</span><span class="my-rank-name">她说慢一点</span><em>9.4 分</em></li>
+            <li><span class="my-rank-idx">4</span><span class="my-rank-name">一张桌子的二十年</span><em>9.3 分</em></li>
+            <li><span class="my-rank-idx">5</span><span class="my-rank-name">给我三分钟</span><em>9.2 分</em></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="my-quote-grid" style="margin-top:30px">
+        <blockquote class="my-quote">
+          <p>我是被朋友安利来的，本来只想看一部，结果一晚上看了四部。最打动我的是《一张桌子的二十年》，看完给我妈打了个电话。这个网站的评论区也比我想象中干净，大家都在好好说话。</p>
+          <footer>
+            <div class="my-avatar my-avatar--b" aria-hidden="true">陈</div>
+            <div><b>陈小满</b><small>观众 · 观看 46 部</small></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="my-quote">
+          <p>作为同行，我很佩服这个平台对声音的重视。《她说慢一点》里那段厨房的环境声处理得很克制，没有加任何多余音乐。这种专业度在同类视频网站里并不常见，HD 片源的稳定性也值得信赖。</p>
+          <footer>
+            <div class="my-avatar my-avatar--c" aria-hidden="true">郑</div>
+            <div><b>郑一鸣</b><small>独立剪辑师 · 社区创作者</small></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="my-quote">
+          <p>投稿的时候其实很没信心，手机拍的，光线也一般。没想到两周后收到了官方编辑的反馈，指出了第三分钟收音的问题，还给了具体的修改建议。后来片子入选了专题，这是我今年最开心的一件事。</p>
+          <footer>
+            <div class="my-avatar my-avatar--a" aria-hidden="true">禾</div>
+            <div><b>阿禾的记录本</b><small>新人创作者 · 投稿 3 次</small></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="my-quote">
+          <p>喜欢这里的专题组织方式，不是把视频堆在一起，而是有线索。看完“手的记忆”之后我去学了补伞，虽然最后还是没学会，但那个过程很有意思。希望多做一些类似的企划，也希望能开线下放映。</p>
+          <footer>
+            <div class="my-avatar my-avatar--d" aria-hidden="true">吴</div>
+            <div><b>吴栖梧</b><small>社区活跃用户 · 专题收藏 12 个</small></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="my-quote">
+          <p>手机上看着很顺，地铁里信号不好也不会一直卡，声音是连着的。这一点做得比一些大平台好。就是希望能加个“仅看已下载”的筛选，还有片单导出功能。</p>
+          <footer>
+            <div class="my-avatar my-avatar--e" aria-hidden="true">罗</div>
+            <div><b>罗新</b><small>通勤观众 · 建议反馈者</small></div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="my-quote">
+          <p>孩子上初中，我们周末会一起看一部短片然后聊二十分钟。《给未来的信》那期他写了三页纸。感谢这样一个不喧哗的地方，让我们还能有共同话题。希望内容继续多元，也注意保护未成年人模式。</p>
+          <footer>
+            <div class="my-avatar my-avatar--f" aria-hidden="true">刘</div>
+            <div><b>刘颖</b><small>家庭用户 · 观看 88 部</small></div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ S7 企业动态 + FAQ ============ -->
+  <section class="my-section" id="my-news" aria-labelledby="my-news-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">News &amp; Help</span>
+        <h2 class="my-h2" id="my-news-title">企业动态与常见问题 · <em>公开、透明、可追溯</em></h2>
+        <p>所有更新与规则调整都在这里公开发布。如有疑问，可先在下方 FAQ 中查找答案。</p>
+      </div>
+
+      <div class="my-split-grid">
+        <div class="my-news-list">
+          <article class="my-news-item">
+            <div class="my-news-date">2026-11-18</div>
+            <div>
+              <h4>“城市微光”冬季创作挑战正式开放报名</h4>
+              <p>面向全体社区创作者，投稿期 30 天，入选作品将进入官方专题展映并获得高清转码支持。</p>
+            </div>
+          </article>
+          <article class="my-news-item">
+            <div class="my-news-date">2026-11-06</div>
+            <div>
+              <h4>片库完成第三轮画质复核，96 部高清作品重新上线</h4>
+              <p>本次复核覆盖孟若羽全部人物纪实类片目，统一了字幕字体与片尾署名格式。</p>
+            </div>
+          </article>
+          <article class="my-news-item">
+            <div class="my-news-date">2026-10-22</div>
+            <div>
+              <h4>创作者线上交流会第 24 期顺利结束</h4>
+              <p>本期围绕“如何在不打扰拍摄对象的前提下完成收音”展开，回放已在投稿页开放。</p>
+            </div>
+          </article>
+          <article class="my-news-item">
+            <div class="my-news-date">2026-10-09</div>
+            <div>
+              <h4>社区评论规则更新：新增引用回复与举报入口</h4>
+              <p>为保护真实讨论氛围，平台同步上线了更明确的内容审核说明与申诉流程。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="my-faq-list" id="my-faq">
+          <details open>
+            <summary>孟若羽作品在线观看是否需要注册？</summary>
+            <p>大部分作品无需注册即可高清观看。收藏、评论、投稿与报名比赛需要注册账号，注册仅需邮箱验证，不强制绑定手机号。</p>
+          </details>
+          <details>
+            <summary>站内片源是正版吗？可以转载吗？</summary>
+            <p>站内孟若羽作品均由官方统一授权上线，属正版高清片源。个人非商业转载需注明来源与作者，商业使用请通过联系表单提交授权申请。</p>
+          </details>
+          <details>
+            <summary>如何参与“城市微光”创作挑战？</summary>
+            <p>点击任意“投稿入口”按钮填写作品信息与网盘或直传链接即可。投稿截止 12 月 20 日，评审结果将在次年 1 月上旬于企业动态中公布。</p>
+          </details>
+          <details>
+            <summary>为什么有些视频标注“高清修复中”？</summary>
+            <p>早期部分作品母版存在轻微噪点，我们正在进行逐帧修复与声轨重制。修复完成前仍可观看，修复后会替换为更高画质版本并发送站内通知。</p>
+          </details>
+          <details>
+            <summary>可以在学校或社区做公益放映吗？</summary>
+            <p>可以。非商业公益放映可通过联系表单提交申请，说明场次、人数与用途，审核通过后我们会提供高清放映文件与授权说明。</p>
+          </details>
+          <details>
+            <summary>评论区被误判删除了怎么办？</summary>
+            <p>请通过页面底部联系方式提交申诉，并附上大致发布时间与账号昵称，我们会在三个工作日内复核并回复。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 合作品牌 ============ -->
+  <section class="my-section my-section--tight" aria-labelledby="my-partner-title">
+    <div class="my-shell">
+      <div class="my-section-head">
+        <span class="my-eyebrow">Partners</span>
+        <h2 class="my-h2" id="my-partner-title">合作伙伴 · <em>与专业机构一起把内容做扎实</em></h2>
+        <p>平台与影像机构、公益组织、院校及地方文化单位保持长期合作，共同支持原创影像与公共放映。</p>
+      </div>
+
+      <div class="my-partner-strip">
+        <div class="my-partner"><b>城南影像社</b><small>联合出品 · 纪实项目</small></div>
+        <div class="my-partner"><b>一隅放映计划</b><small>公益放映 · 社区合作</small></div>
+        <div class="my-partner"><b>青禾声音工作室</b><small>声音设计 · 技术支持</small></div>
+        <div class="my-partner"><b>市立图书馆影像部</b><small>公共展映 · 文化共建</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 投稿 / 联系 CTA ============ -->
+  <section class="my-section my-section--tight" aria-labelledby="my-cta-title">
+    <div class="my-shell">
+      <div class="my-cta-band">
+        <div>
+          <h2 id="my-cta-title">你的片子，也可以出现在这里</h2>
+          <p>无论是一支手机拍摄的短片，还是一段还不太完整的记录，都欢迎提交。官方每月集中审阅一次，并在评论区给出具体意见。我们相信，真实与陪伴本身就是内容生态最珍贵的力量。</p>
+        </div>
+        <div class="my-cta-actions">
+          <button class="my-btn my-btn--primary" type="button" data-my-open="my-submit-modal">我要投稿</button>
+          <button class="my-btn my-btn--ghost" type="button" data-my-open="my-share-modal">分享给朋友</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ S8 页脚 ============ -->
+<footer class="my-footer">
+  <div class="my-shell">
+    <div class="my-footer-grid">
+      <div>
+        <div class="my-brand-mark">
+          <span class="my-logo-orb" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5 L19 12 L8 18.5 Z" fill="#ff7a45"/></svg>
+          </span>
+          <span class="my-brand-text">
+            <b>孟若羽作品在线观看</b>
+            <small>官方影像门户</small>
+          </span>
+        </div>
+        <p class="my-footer-desc">孟若羽作品在线观看官方网站 · 专注原创人物影像与城市叙事，持续运营高品质内容生态，以专业与匠心陪伴每一位创作者与观众。</p>
+      </div>
+
+      <div>
+        <h4>观看与内容</h4>
+        <ul>
+          <li><a href="#my-focus">本周焦点</a></li>
+          <li><a href="#my-videos">作品片库</a></li>
+          <li><a href="#my-topics">专题企划</a></li>
+          <li><a href="#my-ranking">榜单口碑</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>社区与创作</h4>
+        <ul>
+          <li><a href="#my-authors">创作者矩阵</a></li>
+          <li><a href="#my-news">企业动态</a></li>
+          <li><a href="#my-faq">常见问题</a></li>
+          <li><a href="#my-topics">创作挑战报名</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>关于品牌</h4>
+        <ul>
+          <li>官方发布 · 正版高清</li>
+          <li>合作与授权联系</li>
+          <li>公益放映申请</li>
+          <li>内容生态说明</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="my-footer-bottom">
+      <span>© 2026 孟若羽作品在线观看 官方网站 · 版权所有 · 持续运营中</span>
+      <span>备案号：影字备 2026-1108 号 · 内容版权归出品方所有</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Toast / 回到顶部 ============ -->
+<div class="my-toast" id="my-toast" role="status" aria-live="polite"></div>
+<button class="my-top-btn" id="my-top-btn" type="button" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ============ 弹窗：投稿 ============ -->
+<div class="my-modal" id="my-submit-modal" role="dialog" aria-modal="true" aria-labelledby="my-submit-title">
+  <div class="my-modal-box">
+    <button class="my-modal-close" type="button" data-my-close aria-label="关闭">✕</button>
+    <h3 id="my-submit-title">投稿 / 报名入口</h3>
+    <p>填写基本信息后，运营团队会在五个工作日内通过邮件回复。支持手机与相机拍摄，时长建议 3 至 20 分钟。</p>
+    <form id="my-submit-form">
+      <label for="my-submit-name">创作者昵称</label>
+      <input id="my-submit-name" type="text" placeholder="例如：阿禾的记录本" required>
+      <label for="my-submit-mail">联系邮箱</label>
+      <input id="my-submit-mail" type="email" placeholder="用于接收审核结果" required>
+      <label for="my-submit-note">作品简介</label>
+      <textarea id="my-submit-note" rows="3" placeholder="一句话说明你的作品，并附上观看链接"></textarea>
+      <button class="my-btn my-btn--primary" type="submit" style="width:100%">提交投稿信息</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ 弹窗：作者档案 ============ -->
+<div class="my-modal" id="my-author-modal" role="dialog" aria-modal="true" aria-labelledby="my-author-modal-title">
+  <div class="my-modal-box">
+    <button class="my-modal-close" type="button" data-my-close aria-label="关闭">✕</button>
+    <h3 id="my-author-modal-title">创作者档案</h3>
+    <p id="my-author-modal-body">加载中</p>
+    <button class="my-btn my-btn--dark" type="button" data-my-close style="width:100%">关闭</button>
+  </div>
+</div>
+
+<!-- ============ 弹窗：分享 ============ -->
+<div class="my-modal" id="my-share-modal" role="dialog" aria-modal="true" aria-labelledby="my-share-title">
+  <div class="my-modal-box">
+    <button class="my-modal-close" type="button" data-my-close aria-label="关闭">✕</button>
+    <h3 id="my-share-title">分享这个页面</h3>
+    <p>把孟若羽作品与专题推荐给朋友吧。可通过微信、微博或 QQ 分享，也可以直接复制页面链接。</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
+      <button class="my-btn my-btn--ghost" type="button" data-my-copy>复制链接</button>
+      <button class="my-btn my-btn--ghost" type="button" data-my-toast="已准备微信分享文案，请粘贴到微信发送">微信</button>
+      <button class="my-btn my-btn--ghost" type="button" data-my-toast="已准备微博分享文案，请前往微博发布">微博</button>
+      <button class="my-btn my-btn--ghost" type="button" data-my-toast="已准备 QQ 分享文案，请粘贴到聊天窗口">QQ</button>
+    </div>
+    <button class="my-btn my-btn--dark" type="button" data-my-close style="width:100%">关闭</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('my-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('is-show');
+    }, 2200);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var navToggle = document.getElementById('my-nav-toggle');
+  var nav = document.getElementById('my-nav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  /* ---------- 搜索前端反馈 ---------- */
+  var searchInput = document.getElementById('my-search-input');
+  var searchFeedback = document.getElementById('my-search-feedback');
+  var searchIndex = [
+    '夜班公交', '深夜放映室', '海边的第七天', '回声档案', '给未来的信',
+    '菜市场的清晨五点', '一张桌子的二十年', '她说慢一点', '补伞人',
+    '孟若羽', '林知夏', '周与川', '苏晚舟', '何砚青', '许知言',
+    '城市微光挑战', '手的记忆', '城市探索'
+  ];
+  function escapeHtml(str){
+    return String(str).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  if(searchInput && searchFeedback){
+    searchInput.addEventListener('input', function(){
+      var q = searchInput.value.trim();
+      if(!q){
+        searchFeedback.classList.remove('is-open');
+        searchFeedback.innerHTML = '';
+        return;
+      }
+      var hits = searchIndex.filter(function(item){
+        return item.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+      }).slice(0, 5);
+      searchFeedback.innerHTML = hits.length
+        ? '找到 ' + hits.length + ' 条相关内容：' + hits.map(function(h){ return '<b>' + escapeHtml(h) + '</b>'; }).join('、')
+        : '暂未找到与“' + escapeHtml(q) + '”匹配的孟若羽作品，可尝试“城市”“人物”等关键词';
+      searchFeedback.classList.add('is-open');
+    });
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        showToast('已为你检索相关孟若羽作品，可在片库中继续浏览');
+      }
+    });
+    document.addEventListener('click', function(e){
+      if(!e.target.closest('.my-search-wrap')){
+        searchFeedback.classList.remove('is-open');
+      }
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-my-like]');
+    if(likeBtn){
+      var liked = likeBtn.classList.toggle('is-liked');
+      likeBtn.textContent = liked ? '♥ 已点赞' : '♡ 点赞';
+      showToast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    }
+    var saveBtn = e.target.closest('[data-my-save]');
+    if(saveBtn){
+      var saved = saveBtn.classList.toggle('is-saved');
+      if(saveBtn.textContent.indexOf('收藏') !== -1){
+        saveBtn.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      }
+      showToast(saved ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+    }
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.addEventListener('click', function(e){
+    var copyBtn = e.target.closest('[data-my-copy]');
+    if(!copyBtn) return;
+    var title = copyBtn.getAttribute('data-title') || document.title;
+    var text = title;
+    function fallbackCopy(){
+      try{
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('链接已复制，分享给朋友吧');
+      }catch(err){
+        showToast('复制未成功，请手动选择分享');
+      }
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        showToast('链接已复制，分享给朋友吧');
+      }).catch(fallbackCopy);
+    }else{
+      fallbackCopy();
+    }
+  });
+
+  /* ---------- 自定义 Toast 按钮 ---------- */
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-my-toast]');
+    if(t){
+      showToast(t.getAttribute('data-my-toast'));
+    }
+  });
+
+  /* ---------- 弹窗通用 ---------- */
+  var activeModal = null;
+  function openModal(id){
+    var modal = document.getElementById(id);
+    if(!modal) return;
+    if(activeModal) activeModal.classList.remove('is-open');
+    modal.classList.add('is-open');
+    activeModal = modal;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if(activeModal){
+      activeModal.classList.remove('is-open');
+      activeModal = null;
+    }
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    var opener = e.target.closest('[data-my-open]');
+    if(opener){
+      openModal(opener.getAttribute('data-my-open'));
+    }
+    if(e.target.closest('[data-my-close]')){
+      closeModal();
+    }
+    if(e.target.classList && e.target.classList.contains('my-modal')){
+      closeModal();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  /* ---------- 作者弹窗内容 ---------- */
+  var authorProfiles = {
+    '孟若羽': '纪录片导演，本站品牌主理人，擅长人物纪实与城市叙事。代表作品《回声档案》《夜班公交》《海边的第七天》。坚持实景收音与自然光拍摄，主张把镜头先退一步，让人物在自己的空间里自由活动。',
+    '林知夏': '声音设计师，负责站内多部重点作品的现场收音与环境声重建。认为声音是影像里最诚实的一部分，曾用一个夏天复原一条老街的清晨声景，相关短片在社区播放超过二十万次。',
+    '周与川': '剪辑师，擅长把大量素材压缩成克制的节奏。参与剪辑《回声档案》第一季，日常在平台发布剪辑思路拆解，是新人创作者最常请教的作者之一，也是投稿区常驻点评人。',
+    '苏晚舟': '城市影像创作者，偏爱步行与公交视角的城市观察。曾用整个夏天拍完本地十二条公交线路的终点站，作品篇幅短、节奏轻快，适合在通勤路上安静看完。',
+    '何砚青': '摄影指导，以自然光和手持镜头见长，参与拍摄的《海边的第七天》几乎全部单机位完成，画面克制而稳定，是平台画质标准的参考片目之一。',
+    '许知言': '从观众成长为创作者的社区代表。第一部作品用手机拍摄邻居奶奶，被官方专题收录后开始系统学习剪辑。作品保留大量生活毛边，常被新人当作“从零开始”的参考样本。'
+  };
+  document.addEventListener('click', function(e){
+    var link = e.target.closest('[data-my-open="my-author-modal"]');
+    if(!link) return;
+    var name = link.getAttribute('data-author') || '创作者';
+    var body = document.getElementById('my-author-modal-body');
+    var title = document.getElementById('my-author-modal-title');
+    if(title) title.textContent = name + ' · 创作者档案';
+    if(body) body.textContent = authorProfiles[name] || '这位创作者正在完善档案，敬请期待。';
+  });
+
+  /* ---------- 投稿表单 ---------- */
+  var submitForm = document.getElementById('my-submit-form');
+  if(submitForm){
+    submitForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name = document.getElementById('my-submit-name');
+      var mail = document.getElementById('my-submit-mail');
+      if(name && !name.value.trim()){
+        showToast('请填写创作者昵称');
+        name.focus();
+        return;
+      }
+      if(mail && mail.value.trim() === ''){
+        showToast('请填写联系邮箱');
+        mail.focus();
+        return;
+      }
+      submitForm.reset();
+      closeModal();
+      showToast('投稿信息已提交，我们将于五个工作日内回复');
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('my-top-btn');
+  function updateTopBtn(){
+    if(!topBtn) return;
+    if(window.scrollY > 520){
+      topBtn.classList.add('is-show');
+    }else{
+      topBtn.classList.remove('is-show');
+    }
+  }
+  window.addEventListener('scroll', updateTopBtn, {passive:true});
+  updateTopBtn();
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = document.querySelectorAll('[data-my-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted || !counters.length) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-my-count'), 10) || 0;
+      var suffixEl = el.querySelector('i');
+      var suffix = suffixEl ? suffixEl.outerHTML : '';
+      var start = null;
+      var duration = 1300;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.round(target * eased);
+        el.innerHTML = val.toLocaleString('zh-CN') + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window && counters.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          runCounters();
+          io.disconnect();
+        }
+      });
+    }, {threshold:0.4});
+    counters.forEach(function(el){ io.observe(el); });
+  }else{
+    counters.forEach(function(el){
+      el.innerHTML = (parseInt(el.getAttribute('data-my-count'),10)||0).toLocaleString('zh-CN') + (el.querySelector('i') ? el.querySelector('i').outerHTML : '');
+    });
+  }
+
+})();
+</script>
+</body>
+  </html>
